@@ -132,9 +132,9 @@ HRESULT PlayerManager::Add_Character()
 		cout << " * " << name << "님의 새로운 캐릭터를 등록합니다." << endl;
 		cout << " * 주의사항 : 입력하라는거 말고 다른거 입력하면 프로그램 터집니다. " << endl;
 		cout << BORDER << endl;
-
 		cout << " - 캐릭터의 직업을 입력해주세요 (대체어 가능, 많이 쓰이는 것만)" << endl;
 		cout << " - 예) 데빌헌터 = 데헌, 데모닉 = 충모닉" << endl;
+		cout << BORDER << endl;
 		cout << " >> ";
 		cin >> classname;
 
@@ -144,34 +144,55 @@ HRESULT PlayerManager::Add_Character()
 			cout << " * 올바르지 않은 직업명입니다. 다시 입력해주세요." << endl;
 			continue;
 		}
+		cout << BORDER << endl;
 		classname = SynergyManager::GetInstance()->Get_FullName(classname);
 		cout << " * " << classname << " - 시너지 :  " << SynergyManager::GetInstance()->Convert_SynergyName(t) << endl;
+		cout << BORDER << endl;
+		cout << endl;
+		system("pause");
 
+		system("cls");
+		cout << BORDER << endl;
+		cout << " * " << name << "님의 " << classname << " 등록 중 " << endl;
 		cout << BORDER << endl;
 		cout << " - 캐릭터의 아이템 레벨을 입력해주세요 " << endl;
+		cout << BORDER << endl;
 		cout << " >> ";
 		cin >> level;
 
+		system("cls");
+		cout << BORDER << endl;
+		cout << " * " << name << "님의 " << classname << " 등록 중 " << endl;
 		cout << BORDER << endl;
 		cout << " - 캐릭터의 각인 3 개수를 입력해주세요 " << endl;
 		cout << " - 예) 33333 = 5, 33331 = 4" << endl;
+		cout << BORDER << endl;
+		cout << " >> ";
 		cin >> acc;
 
+		system("cls");
+		cout << BORDER << endl;
+		cout << " * " << name << "님의 " << classname << " 등록 중 " << endl;
 		cout << BORDER << endl;
 		cout << " - 캐릭터의 트포작 유무를 입력해주세요 (최대 5, 최소 0)" << endl;
 		cout << " - 예) 완벽해요= 5, 좀 해놓긴 했는데.. = 3, 그딴거 나는 몰루요 = 0" << endl;
-		cin >> tripod;
 		cout << BORDER << endl;
+		cout << " >> ";
+		cin >> tripod;
 
 		break;
 	}
 
+	system("cls");
 	Character* chara = Character::Create(classname, t, level, acc, tripod);
 	if(!chara)
 	{
 		cout << " * ERROR : 캐릭터 등록에 실패하였습니다." << endl;
 		return E_FAIL;
 	}
+
+	cout << endl;
+	cout << BORDER << endl;
 
 	p->second.emplace_back(chara);
 	cout << " * 캐릭터를 등록하였습니다." << endl;
