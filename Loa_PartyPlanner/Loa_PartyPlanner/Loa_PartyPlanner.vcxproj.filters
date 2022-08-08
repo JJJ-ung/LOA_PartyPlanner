@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Loa_PartyPlanner.cpp" />
+    <ClCompile Include="SynergyManager.cpp">
+      <Filter>SynergyManager</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerManager.cpp">
+      <Filter>PlayerManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Character">
+      <UniqueIdentifier>{1b7c9cf4-0fe0-458d-ae68-88617f7fe6f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{9e7ed8a6-b9c8-486a-875a-c33876a9d67c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SynergyManager">
+      <UniqueIdentifier>{f697532c-1cd4-4e48-8cca-eb9d01e6baab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlayerManager">
+      <UniqueIdentifier>{79fe3e9c-af85-4e09-b029-7ddf90a38242}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Enum.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Functor.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SynergyManager.h">
+      <Filter>SynergyManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework.h" />
+    <ClInclude Include="PlayerManager.h">
+      <Filter>PlayerManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
